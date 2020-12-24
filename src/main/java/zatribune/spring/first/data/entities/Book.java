@@ -12,19 +12,24 @@ public class Book {
     Long id;
     String title;
     String ispn;
-    String publisher;
-
-    @ManyToMany(mappedBy = "books")
+    @OneToOne(cascade = CascadeType.ALL)
+    Publisher publisher;
+    /*
+In a @ManyToMany association, you cannot use CascadeType.ALL or orphanRemoval
+as this will propagate the delete entity state transition from one parent to another parent entity.
+Therefore, for @ManyToMany associations, you usually cascade the CascadeType.PERSIST or CascadeType.MERGE operations.
+Alternatively, you can expand that to DETACH or REFRESH.
+  */
+    @ManyToMany(mappedBy = "books", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     Set<Author> authors = new HashSet<>();
 
     public Book() {
 
     }
 
-    public Book(String title, String ispn, String publisher) {
+    public Book(String title, String ispn) {
         this.title = title;
         this.ispn = ispn;
-        this.publisher = publisher;
     }
 
     public Long getId() {
@@ -51,11 +56,11 @@ public class Book {
         this.ispn = ispn;
     }
 
-    public String getPublisher() {
+    public Publisher getPublisher() {
         return publisher;
     }
 
-    public void setPublisher(String publisher) {
+    public void setPublisher(Publisher publisher) {
         this.publisher = publisher;
     }
 

@@ -13,7 +13,7 @@ public class Author {
     Long id;
     String firstName;
     String lastName;
-    @ManyToMany
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
      // this one is optional
     @JoinTable(name = "book_author", joinColumns = @JoinColumn(name = "author_id"), inverseJoinColumns = @JoinColumn(name = "book_id"))
     Set<Book> books = new HashSet<>();
