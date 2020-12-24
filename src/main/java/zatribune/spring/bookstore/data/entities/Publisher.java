@@ -1,4 +1,4 @@
-package zatribune.spring.first.data.entities;
+package zatribune.spring.bookstore.data.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

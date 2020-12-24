@@ -1,9 +1,9 @@
-package zatribune.spring.first.controllers;
+package zatribune.spring.bookstore.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import zatribune.spring.first.data.repositories.AuthorRepository;
+import zatribune.spring.bookstore.data.repositories.AuthorRepository;
 
 @Controller
 public class AuthorController {

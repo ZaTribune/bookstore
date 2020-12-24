@@ -1,4 +1,4 @@
-package zatribune.spring.first;
+package zatribune.spring.bookstore;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

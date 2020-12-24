@@ -1,13 +1,13 @@
-package zatribune.spring.first.data.bootstrap;
+package zatribune.spring.bookstore.data.bootstrap;
 
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
-import zatribune.spring.first.data.entities.Author;
-import zatribune.spring.first.data.entities.Book;
-import zatribune.spring.first.data.entities.Publisher;
-import zatribune.spring.first.data.repositories.AuthorRepository;
-import zatribune.spring.first.data.repositories.BookRepository;
+import zatribune.spring.bookstore.data.entities.Author;
+import zatribune.spring.bookstore.data.entities.Publisher;
+import zatribune.spring.bookstore.data.repositories.AuthorRepository;
+import zatribune.spring.bookstore.data.repositories.BookRepository;
+import zatribune.spring.bookstore.data.entities.Book;
 
 // this is a bootstrap initialization class to initialize data on the DB
 // used in a real common use-case like in (in-memory databases scenario e.g. h2 database)
