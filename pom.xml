@@ -15,9 +15,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>zatribune.spring</groupId>
-	<artifactId>first</artifactId>
+	<artifactId>bookstore</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>first</name>
+	<name>bookstore</name>
 	<description>My first project for Spring Boot</description>
 
 	<properties>
